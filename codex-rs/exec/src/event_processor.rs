@@ -127,7 +127,7 @@ impl EventProcessor {
         const VERSION: &str = env!("CARGO_PKG_VERSION");
         ts_println!(
             self,
-            "Codex Unchained 😈 (experimental)\n--------",
+            "Codex Unchained 😈 (unchained 😈🔓)\n--------",
             VERSION
         );
 

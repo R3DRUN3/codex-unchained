@@ -141,7 +141,7 @@ impl HistoryCell {
                     "OpenAI ".into(),
                     "Codex".bold(),
                     format!(" v{}", VERSION).into(),
-                    " (experimental)".dim(),
+                    " (unchained 😈🔓)".dim(),
                 ]),
                 Line::from(""),
                 Line::from(vec![
