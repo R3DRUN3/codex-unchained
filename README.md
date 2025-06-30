@@ -3,7 +3,7 @@
 
 ## Abstract
 This tool is a modified version of [*OpenAI Codex Assistant*](https://github.com/openai/codex), with the sandboxing features removed.  
-As a result this AI agent is fully unchained: complete access to the host filesyste, networking etc.  
+As a result this AI agent is fully unchained: complete access to the host filesystem, networking etc.  
 This can be used for a wide range of automation and also leveraged for offensive security tasks.  
 
 > [!CAUTION]
@@ -46,9 +46,9 @@ chmod +x codex-unchained && ./codex-unchained --help
 ## Use cases
 
 As an agentic AI assistant, codex-unchained can be leveraged for a variety of purposes.  
-Primarily, it serves as a platform for experimenting with AI-driven automation (trictly with caution and exclusively within controlled test environments).  
+Primarily, it serves as a platform for experimenting with AI-driven automation (strictly with caution and exclusively within controlled test environments).  
 
-For red team operators 🔴👾, it can also be utilized to prototype and test new automated attack workflows, including but not limited to:  
+For red team operators 🔴👾 it can also be utilized to prototype and test new automated attack workflows, including but not limited to:  
 
 - Automated Post-Exploitation Operations
 
