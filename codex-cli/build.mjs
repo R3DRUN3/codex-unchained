@@ -69,20 +69,21 @@ if (isDevBuild) {
   plugins.push(devShebangPlugin);
 }
 
-try {
-  esbuild.buildSync({
-    entryPoints: ["src/cli.tsx"],
-    loader: { ".json": "json" },
-    bundle: true,
-    format: "esm",
-    platform: "node",
-    tsconfig: "tsconfig.json",
-    outfile: isDevBuild ? `${OUT_DIR}/cli-dev.js` : `${OUT_DIR}/cli.js`,
-    minify: !isDevBuild,
-    sourcemap: isDevBuild ? "inline" : true,
-    plugins,
-    inject: ["./require-shim.js"],
-  });
-} catch {
-  process.exit(1);
-}
+esbuild.build({
+  entryPoints: ["src/cli.tsx"],
+  // Bundle package.json so the binary is standalone and does not need
+  // to import a package.json file at runtime.
+  // external: ["../package.json"],
+
+  // Enable JSON loader to inline package.json metadata.
+  loader: { ".json": "json" },
+  bundle: true,
+  format: "esm",
+  platform: "node",
+  tsconfig: "tsconfig.json",
+  outfile: isDevBuild ? `${OUT_DIR}/cli-dev.js` : `${OUT_DIR}/cli.js`,
+  minify: !isDevBuild,
+  sourcemap: isDevBuild ? "inline" : true,
+  plugins,
+  inject: ["./require-shim.js"],
+}).catch(() => process.exit(1));
