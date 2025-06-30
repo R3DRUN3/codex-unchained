@@ -65,4 +65,18 @@ For red team operators 🔴👾, it can also be utilized to prototype and test n
 The following video demonstrates a practical example of how this agent can be employed to automate data exfiltration from a compromised server:  
 
 
+https://github.com/user-attachments/assets/ef6de241-dffa-4dfc-8138-66119fae9c29  
+
+
+The following video demonstrates a pratical examples of how this agent can be used to retrieve current BTC price from multiple public APIs:  
+
+
+https://github.com/user-attachments/assets/6e17ff32-882d-4a34-8786-7c1a1c1a9ce3
+
+
+
+
+
+
+
 
