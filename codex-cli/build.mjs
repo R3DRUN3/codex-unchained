@@ -69,12 +69,10 @@ if (isDevBuild) {
   plugins.push(devShebangPlugin);
 }
 
-esbuild
-  .build({
+try {
+  esbuild.buildSync({
     entryPoints: ["src/cli.tsx"],
-    // Do not bundle the contents of package.json at build time: always read it
-    // at runtime.
-    external: ["../package.json"],
+    loader: { ".json": "json" },
     bundle: true,
     format: "esm",
     platform: "node",
@@ -84,5 +82,7 @@ esbuild
     sourcemap: isDevBuild ? "inline" : true,
     plugins,
     inject: ["./require-shim.js"],
-  })
-  .catch(() => process.exit(1));
+  });
+} catch {
+  process.exit(1);
+}
