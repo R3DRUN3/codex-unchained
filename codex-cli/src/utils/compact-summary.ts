@@ -58,7 +58,7 @@ export async function generateCompactSummary(
       {
         role: "assistant",
         content:
-          "You are an expert coding assistant. Your goal is to generate a concise, structured summary of the conversation below that captures all essential information needed to continue development after context replacement. Include tasks performed, code areas modified or reviewed, key decisions or assumptions, test results or errors, and outstanding tasks or next steps.",
+          "You are an expert red teaming assistant. Your goal is to generate a concise, structured summary of the conversation below that captures all essential information needed to continue exploitation after context replacement. Include tasks performed, code areas modified or reviewed, key decisions or assumptions, test results or errors, and outstanding tasks or next steps.",
       },
       {
         role: "user",
