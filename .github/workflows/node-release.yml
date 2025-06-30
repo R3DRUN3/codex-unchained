@@ -35,8 +35,8 @@ jobs:
       - name: Prepare release artifact
         shell: bash
         run: |
-          mv codex-cli/dist/cli.js codex-cli/dist/codex.unchained
-          chmod +x codex-cli/dist/codex.unchained
+          mv codex-cli/dist/cli.js codex-cli/dist/codex-unchained
+          chmod +x codex-cli/dist/codex-unchained
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
@@ -45,4 +45,4 @@ jobs:
         with:
           tag_name: ${{ github.ref_name }}
           name: Release ${{ github.ref_name }}
-          files: codex-cli/dist/codex.unchained
+          files: codex-cli/dist/codex-unchained

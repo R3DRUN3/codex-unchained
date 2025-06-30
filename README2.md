@@ -1,5 +1,7 @@
 
-Build:
+## Instructions  
+
+Build locally:  
 
 ```sh
 cd codex-cli && npm install && npm run build
