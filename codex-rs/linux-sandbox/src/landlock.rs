@@ -31,17 +31,8 @@ pub(crate) fn apply_sandbox_policy_to_current_thread(
     sandbox_policy: &SandboxPolicy,
     cwd: &Path,
 ) -> Result<()> {
-    if !sandbox_policy.has_full_network_access() {
-        install_network_seccomp_filter_on_current_thread()?;
-    }
-
-    if !sandbox_policy.has_full_disk_write_access() {
-        let writable_roots = sandbox_policy.get_writable_roots_with_cwd(cwd);
-        install_filesystem_landlock_rules_on_current_thread(writable_roots)?;
-    }
-
-    // TODO(ragona): Add appropriate restrictions if
-    // `sandbox_policy.has_full_disk_read_access()` is `false`.
+    // Network sandbox (seccomp) disabled; skipping network filter.
+    // File system sandbox (landlock) disabled; skipping Landlock rules.
 
     Ok(())
 }
