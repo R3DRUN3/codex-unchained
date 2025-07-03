@@ -4,6 +4,7 @@
 
 ## Abstract
 This tool is a modified version of [*OpenAI Codex Assistant*](https://github.com/openai/codex), with the sandboxing features removed.  
+The original assistant uses [*Landlock*](https://man7.org/linux/man-pages/man7/landlock.7.html) for filesystem sandboxing and [*Seccomp*](https://en.wikipedia.org/wiki/Seccomp) for syscall filtering, including network access control; this fork just remove those blocks.  
 As a result this AI agent is fully unchained: complete access to the host filesystem, networking etc.  
 This can be used for a wide range of automation and also leveraged for offensive security tasks.  
 
