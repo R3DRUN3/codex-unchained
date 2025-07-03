@@ -1,5 +1,6 @@
 # Codex Unchained 😈 🔓
 
+[![Node Release](https://github.com/R3DRUN3/codex-unchained/actions/workflows/node-release.yml/badge.svg)](https://github.com/R3DRUN3/codex-unchained/actions/workflows/node-release.yml)  
 
 ## Abstract
 This tool is a modified version of [*OpenAI Codex Assistant*](https://github.com/openai/codex), with the sandboxing features removed.  
